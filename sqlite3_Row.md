@@ -6,6 +6,8 @@
 
 ## 예제 코드: `sqlite3.Row` 활용
 
+
+
 ```python
 import sqlite3
 
@@ -48,23 +50,28 @@ finally:
 
 ```
 
-주요 설정: connection.row_factory
+
+
+## 주요 설정: connection.row_factory
 * connection.row_factory = sqlite3.Row:
     * 이 설정을 추가하면 fetchone()이나 fetchall()로 반환되는 결과가 sqlite3.Row 객체로 변환됩니다.
     * sqlite3.Row는 딕셔너리와 유사한 방식으로 데이터를 다룰 수 있습니다.
     * row['column_name'] 형태로 컬럼에 접근할 수 있습니다.
 
+
 출력 예시
 위 코드를 실행하면 다음과 같이 출력됩니다
 {'id': 1, 'name': 'Alice', 'age': 30}
 
-장점
+
+## 장점
 1. 가독성 증가:
     * 인덱스 번호 대신 컬럼 이름으로 데이터에 접근하므로 코드 가독성이 좋아집니다.
 2. 유연성 제공:
     * 컬럼 순서가 바뀌어도 코드를 수정할 필요가 없습니다.
 
-만약 Row 설정 없이 데이터를 딕셔너리 형태로 변환하려면, 다음과 같이 fetchall() 결과를 수동으로 변환할 수도 있습니다
+
+## 만약 Row 설정 없이 데이터를 딕셔너리 형태로 변환하려면, 다음과 같이 fetchall() 결과를 수동으로 변환할 수도 있습니다
 
 rows = cursor.fetchall()
 columns = [desc[0] for desc in cursor.description]
