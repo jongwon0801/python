@@ -70,8 +70,10 @@ finally:
 2. 유연성 제공:
     * 컬럼 순서가 바뀌어도 코드를 수정할 필요가 없습니다.
 
+---
 
-## 만약 Row 설정 없이 데이터를 딕셔너리 형태로 변환하려면, 다음과 같이 fetchall() 결과를 수동으로 변환할 수도 있습니다
+## 만약 Row 설정 없이 데이터를 딕셔너리 형태로 변환하려면, 
+## 다음과 같이 fetchall() 결과를 수동으로 변환할 수도 있습니다
 
 rows = cursor.fetchall()
 columns = [desc[0] for desc in cursor.description]
