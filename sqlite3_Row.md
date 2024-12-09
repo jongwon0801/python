@@ -76,6 +76,8 @@ finally:
 
 fetchall() 결과를 수동으로 변환
 
+```
 rows = cursor.fetchall()
 columns = [desc[0] for desc in cursor.description]
 result = [dict(zip(columns, row)) for row in rows]
+
