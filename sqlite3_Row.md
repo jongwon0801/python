@@ -46,6 +46,7 @@ except sqlite3.Error as e:
 finally:
     connection.close()
 
+```
 
 주요 설정: connection.row_factory
 * connection.row_factory = sqlite3.Row:
