@@ -72,8 +72,9 @@ finally:
 
 ---
 
-## 만약 Row 설정 없이 데이터를 딕셔너리 형태로 변환하려면, 
-## 다음과 같이 fetchall() 결과를 수동으로 변환할 수도 있습니다
+## Row 설정 없이 데이터를 딕셔너리 형태로 변환 예시
+
+fetchall() 결과를 수동으로 변환
 
 rows = cursor.fetchall()
 columns = [desc[0] for desc in cursor.description]
