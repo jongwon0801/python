@@ -1,4 +1,4 @@
-# `cursor.fetchall()`와 `device` 변수의 역할
+
 
 ## `cursor.fetchall()`의 역할
 - **`cursor.fetchall()`**: 데이터베이스에서 쿼리 결과를 가져와 **리스트 형태**로 반환합니다.
